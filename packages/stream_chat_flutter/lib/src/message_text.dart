@@ -22,7 +22,8 @@ class MessageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final text = _replaceMentions(message.text ?? '').replaceAll('\n', '\\n');
+    final text = _replaceMentions(message.text ?? '').replaceAll('\n', '\\\\n');
+    print(text);
 
     return MarkdownBody(
       data: text,
